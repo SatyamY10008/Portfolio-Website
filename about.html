@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About | Satyam Yadav</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Math&display=swap" rel="stylesheet" />
+  <style>
+    html {
+      scroll-padding-top: 15vh;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Libertinus Math", system-ui;
+      background-color: #000;
+      color: white;
+      display: flex;
+      flex-direction: row; /* layout still allows sidebar + content */
+    }
+
+    .navlist {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      height: 15vh;
+      align-items: center;
+      list-style: none;
+      z-index: 1000;
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(4px);
+    }
+
+    .navlist li a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 1rem;
+      position: relative;
+    }
+
+    .navlist li a::after,
+    .navlist .active::after {
+      content: "";
+      position: absolute;
+      background: #fff;
+      width: 100%;
+      height: 0.1rem;
+      left: 0;
+      bottom: -5px;
+      transform: scale(0);
+      transform-origin: bottom right;
+      transition: transform 0.5s;
+    }
+
+    .navlist li a:hover::after,
+    .navlist .active::after {
+      transform: scale(1);
+      transform-origin: bottom left;
+    }
+
+    .left-container {
+      width: 60px;
+      min-height: 100vh;
+      background-color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20rem;
+      gap: 2rem;
+    }
+
+    .left-container a img,
+    .left-container i {
+      font-size: 1.7rem;
+      color: #bbb;
+      transition: all 0.3s ease;
+    }
+
+    .left-container i:hover {
+      background: linear-gradient(#fff, #3877FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .about-section {
+      padding: 4rem;
+      margin-left: 60px;
+      margin-top: 15vh; /* this fixes the overlap */
+      max-width: 900px;
+    }
+
+    .about-section h1 {
+      color: #5DB9EE;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      line-height: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="navlist">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="work.html">Work</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+  </ul>
+
+  <div class="left-container">
+  <a href="https://www.linkedin.com/in/satyamyadav1213/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+  <a href="https://github.com/SatyamY10008" target="_blank"><i class="fa-brands fa-github"></i></a>
+  <a href="https://leetcode.com/Satyam10008" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" style="width: 24px; height: 24px;" />
+  </a>
+</div>
+
+
+  <div class="about-section">
+  <h1>About Me</h1>
+
+  <p>
+    I’m <strong>Satyam Yadav</strong>, an Embedded Systems Engineer with a deep passion for building real-time robotic and IoT systems that solve real-world problems. With over 2 years of hands-on experience, I specialize in embedded C/C++ programming, sensor integration, PCB prototyping, and intelligent automation.
+  </p>
+
+  <p>
+    Currently pursuing a B.Tech in <strong>Electronics and Communication Engineering (AI & Cybernetics)</strong> at VIT Bhopal, I’ve worked on several impactful projects ranging from gesture-controlled humanoid robots to field-tested agricultural bots using OpenCV for disease detection. My academic focus and project work intersect across <em>embedded systems, robotics, signal processing, and control systems</em>.
+  </p>
+
+  <p>
+    I’m proficient with microcontrollers like <strong>Arduino, ESP32, and STM32</strong>, and communication protocols including <strong>UART, SPI, and I2C</strong>. My workflow includes tools such as <strong>ROS, MATLAB, KiCAD</strong>, and <strong>FreeRTOS</strong>, allowing me to design and implement reliable, modular systems for real-time applications.
+  </p>
+
+  <p>
+    What drives me is the intersection of hardware and intelligence — I strive to create embedded solutions that are not only functional but also scalable, educational, and impactful. Whether it's developing robotics kits for schools or optimizing embedded firmware to reduce system latency, I approach every challenge with curiosity and precision.
+  </p>
+
+  <p>
+    Outside the lab, I’m also actively engaged in collaborative problem-solving, documentation, and leading project teams. My long-term goal is to contribute to the evolution of autonomous systems and embedded AI by creating tools and platforms that bridge technology and human needs.
+  </p>
+</div>
+

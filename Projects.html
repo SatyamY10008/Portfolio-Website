@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Projects | Satyam Yadav</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Math&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Libertinus Math", system-ui;
+      background-color: #000;
+      color: white;
+      display: flex;
+    }
+
+    /* Navbar */
+    .navlist {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+      padding: 2rem 0 0 0;
+      margin: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+    }
+
+    .navlist li a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 1rem;
+      position: relative;
+    }
+
+    .navlist li a::after,
+    .navlist .active::after {
+      content: "";
+      position: absolute;
+      background: #fff;
+      width: 100%;
+      height: 0.1rem;
+      left: 0;
+      bottom: -5px;
+      transform: scale(0);
+      transform-origin: bottom right;
+      transition: transform 0.5s;
+    }
+
+    .navlist li a:hover::after,
+    .navlist .active::after {
+      transform: scale(1);
+      transform-origin: bottom left;
+    }
+
+    .left-container {
+      width: 60px;
+      min-height: 100vh;
+      background-color: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20rem;
+      gap: 2rem;
+    }
+
+    .left-container a img,
+    .left-container i {
+      font-size: 1.7rem;
+      color: #bbb;
+      transition: all 0.3s ease;
+    }
+
+    .left-container i:hover {
+      cursor: pointer;
+      background: linear-gradient(#fff, #3877FF);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .content {
+      margin-left: 80px; /* space between left container and content */
+      padding: 18vh 4rem 4rem 4rem; /* top margin for navbar + padding */
+      max-width: 900px;
+    }
+
+    .content h1 {
+      color: #5DB9EE;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .detail {
+      font-size: 1.1rem;
+      line-height: 1.8rem;
+      margin-bottom: 2rem;
+      color: white;
+      max-width: 900px;
+    }
+
+    .detail h3 {
+      color: #5DB9EE;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <ul class="navlist">
+    <li><a href="index.html" target="_self">Home</a></li>
+    <li><a href="work.html" target="_self">Work</a></li>
+    <li><a href="about.html" target="_self">About</a></li>
+    <li><a href="projects.html" class="active" target="_self">Projects</a></li>
+  </ul>
+
+  <!-- Left Icons -->
+  <div class="left-container">
+    <a href="https://www.linkedin.com/in/satyamyadav1213/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+    <a href="https://github.com/SatyamY10008" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="https://leetcode.com/Satyam10008" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png" alt="LeetCode" style="width: 24px; height: 24px;" />
+    </a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="content">
+    <h1>Projects</h1>
+    <div class="detail">
+      <h3>Aqua Check – Real-Time IoT Water Monitoring System</h3>
+      <p><strong>July 2024 – Mar 2025</strong><br>
+        Developed a system using Arduino + ESP32 to monitor water quality (pH, turbidity, temperature). Enabled real-time sensor feedback on IoT dashboard. Used SPI sensors and UART comms to reduce data latency by 20%.
+      </p>
+
+      <h3>Autonomous Agriculture Bot with OpenCV Disease Detection</h3>
+      <p><strong>Mar 2024 – May 2024</strong><br>
+        Engineered an IoT-based robot automating 3+ key farming tasks: sowing, irrigation, and weed removal. Integrated OpenCV for disease detection, improving early identification by 60% and increasing crop yield by 25%.<br>
+        Field-tested across 2 farm plots, collecting over 300+ plant images for validation and refinement.
+      </p>
+
+      <h3>Arduino-Based Humanoid Robot</h3>
+      <p><strong>Sept 2023 – Nov 2023</strong><br>
+        Built robotic system to mimic human gestures using servo-motor synchronization. Programmed gesture recognition logic and control loop using RTOS simulation.<br>
+        Controlled robotic actions via ROS nodes and implemented path planning. Improved response speed by 15% through optimized firmware timing routines.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
